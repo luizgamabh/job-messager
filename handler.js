@@ -21,6 +21,7 @@ function JobMessager(msg) {
                 owner: match[1],
                 company: match[2]
             };
+            final_message = decodeURI(final_message);
             var msg = final_message.replace(/\$OWNER\$/g, ret.owner).replace(/\$COMPANY\$/g, ret.company);
         }
         return msg || '';
