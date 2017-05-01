@@ -6,8 +6,7 @@ function JobMessager(msg) {
         if (!!el.length) {
             for (var i = 0; i < el.length; i++) {
                 var placeholder = el[i].getAttribute('placeholder');
-                var message = handleMessage(placeholder, this.message);
-                el[i].value = message;
+                el[i].value = handleMessage(placeholder, this.message);
             }
         } else {
             // Wrong page, do nothing!
@@ -30,7 +29,7 @@ function JobMessager(msg) {
 
 chrome.runtime.onMessage.addListener(listener);
 
-function listener(message, sender, sendResponse) {
+function listener(message) {
     chrome.runtime.onMessage.removeListener(listener);
     if (message) {
         var job = new JobMessager(message);
