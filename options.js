@@ -15,22 +15,22 @@ function saveChanges() {
     message('Error: No message written');
     return;
   }
-  storage.set({'angel_message': message}, function() {
+  storage.set({'job_message': encodeURI(message)}, function() {
     message('Settings saved');
   });
 }
 
 function loadChanges() {
-  storage.get('angel_message', function(items) {
-    if (items.angel_message) {
-      textarea.value = items.angel_message;
+  storage.get('job_message', function(items) {
+    if (items.job_message) {
+      textarea.value = decodeURI(items.job_message);
       message('Loaded saved message.');
     }
   });
 }
 
 function reset() {
-  storage.remove('angel_message', function(items) {
+  storage.remove('job_message', function(items) {
     message('Reset stored message');
   });
   textarea.value = '';
