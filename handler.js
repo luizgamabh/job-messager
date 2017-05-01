@@ -1,8 +1,3 @@
-/**
- * Classe para criação de mensagem
- * @param message
- * @constructor
- * */
 function JobMessager(msg) {
     this.message = msg;
 

@@ -1,7 +1,7 @@
 {
   "name": "Job Messager",
   "description": "Save time with this extension while look for jobs.",
-  "version": "1.1",
+  "version": "1.1.1",
 
   "permissions": [
     "activeTab",
