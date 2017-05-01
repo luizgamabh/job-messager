@@ -1,0 +1,20 @@
+{
+  "name": "Job Messager",
+  "description": "Save time with this extension while look for jobs.",
+  "version": "1.1",
+
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+
+  "options_page": "options.html",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Job messager!",
+    "default_popup": "popup.html"
+  },
+
+  "manifest_version": 2
+}
