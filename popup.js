@@ -3,7 +3,7 @@ var storage = chrome.storage.local;
 var message = document.querySelector('#message');
 
 storage.get('angel_message', function (items) {
-    message.innerHTML = 'iniciando';
+    message.innerHTML = 'Starting';
     if (items.angel_message) {
         message.innerHTML = 'angel_message';
         chrome.tabs.getSelected(null, function(tab){
